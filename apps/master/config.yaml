@@ -1,0 +1,34 @@
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+  
+    attributes:
+      title: !string {}
+      scale: !string {}
+      showGfi: !string {}
+      gfi: !string {}
+      showLegend: !string {}
+      legend: !string {}
+      map: !map
+        maxDpi: 400
+        dpiSuggestions: [72, 96, 120, 400]
+        width: 800
+        height: 470
+        zoomLevels: !zoomLevels
+          scales: [500, 1000, 2000, 2500, 5000, 10000, 25000, 50000, 100000, 250000]
+      scalebar: !scalebar
+        height: 20
+        width: 143
+        default:
+          barSize: 2
+          type: bar
+          align: left
+          intervals: 4
+          lineWidth: 1
+          font: Helvetica
+          fontSize: 8
+    processors:
+      - !reportBuilder
+        directory: '.'
+      - !createMap {}
+      - !createScalebar {}
