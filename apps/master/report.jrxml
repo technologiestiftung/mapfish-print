@@ -73,12 +73,19 @@
 	</detail>
 	<pageFooter>
 		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="480" y="0" width="280" height="21" isRemoveLineWhenBlank="true" uuid="3988392b-f1e2-4eda-9cb4-7caa2b3eb0ce"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Erstellt am"]]></textFieldExpression>
+			</textField>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="520" y="0" width="280" height="21" isRemoveLineWhenBlank="true" uuid="3988392b-f1e2-4eda-9cb4-7caa2b3eb0ce"/>
 				<textElement textAlignment="Right" verticalAlignment="Bottom">
 					<font size="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Erstellt am: "+new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="0" width="300" height="21" uuid="d204985d-5fd1-4858-8e59-5c674bdb594a"/>
