@@ -1,6 +1,9 @@
 # mapfish-print-tsb
 This setup uses the latest mapfish print service (at time of writing version 3): https://mapfish.github.io/mapfish-print-doc/
 
+## Docker
+The docker setup is build on top of the `camptocamp/mapfish_print` image. Only the print apps from this repository are added to the container. The path `${CATALINA_HOME}/webapps/ROOT/print-apps` is the path inside the container, where apps are being stored.
+
 ## Configuration
 Mapfish print is an extremely powerful and highly configurable service. BUT, in most instances you will only require a tiny subset of those configs. This exemplary setup reflects this.
 
