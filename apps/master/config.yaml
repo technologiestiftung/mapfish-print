@@ -5,10 +5,10 @@ templates:
     attributes:
       title: !string {}
       scale: !string {}
-      showGfi: !string {}
-      gfi: !string {}
-      showLegend: !string {}
-      legend: !string {}
+      showGfi: !boolean {}
+      gfi: !jsonDatasource {}
+      showLegend: !boolean {}
+      legend: !jsonDatasource {}
       map: !map
         maxDpi: 400
         dpiSuggestions: [72, 96, 120, 400]
