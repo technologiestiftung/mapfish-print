@@ -13,13 +13,19 @@
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="title" class="java.lang.String"/>
-	<parameter name="scale" class="java.lang.String"/>
+	<parameter name="scale" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
 	<parameter name="mapSubReport" class="java.lang.String"/>
 	<parameter name="scalebarSubReport" class="java.lang.String"/>
-	<parameter name="showGfi" class="java.lang.String"/>
-	<parameter name="showLegend" class="java.lang.String"/>
-	<parameter name="gfi" class="java.lang.String"/>
-	<parameter name="legend" class="java.lang.String"/>
+	<parameter name="gfi" class="net.sf.jasperreports.engine.data.JsonDataSource">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="legend" class="net.sf.jasperreports.engine.data.JsonDataSource">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="showGfi" class="java.lang.Boolean"/>
+	<parameter name="showLegend" class="java.lang.Boolean"/>
 	<title>
 		<band height="30" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout"/>
@@ -69,6 +75,17 @@
 				</textElement>
 				<textFieldExpression><![CDATA["Maßstab: " + $P{scale}]]></textFieldExpression>
 			</textField>
+		</band>
+		<band height="40" splitType="Prevent">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<printWhenExpression><![CDATA[$P{showLegend} == true]]></printWhenExpression>
+			<subreport isUsingCache="false">
+				<reportElement x="0" y="0" width="525" height="40" isRemoveLineWhenBlank="true" uuid="2e5ea9fe-0dbe-4ba5-a02b-183285ad0fe3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{legend}.subDataSource("layers")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["legend.jasper"]]></subreportExpression>
+			</subreport>
 		</band>
 	</detail>
 	<pageFooter>
