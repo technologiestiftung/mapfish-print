@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Build%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiesitftung%20Berlin-blue)
+
 # mapfish-print-tsb
 This setup uses the latest mapfish print service (at time of writing version 3): https://mapfish.github.io/mapfish-print-doc/
 
