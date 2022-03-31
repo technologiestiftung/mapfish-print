@@ -72,3 +72,16 @@ see also: https://mapfish.github.io/mapfish-print-doc/configuration.html
 
 ## Running on render.com
 This app is a bit more resource intensive and requires at least 1Gig of ram. The amount of ram also depends on the DPI and size of the reports. Bigger reports, higher resolution will require more ram.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
